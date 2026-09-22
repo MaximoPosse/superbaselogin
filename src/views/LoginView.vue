@@ -75,6 +75,10 @@ async function iniciarSesion() {
         {{ mensaje }}
       </p>
       <p class="enlace-registro">
+        ¿Olvidaste tu contraseña?
+        <RouterLink to="/recuperar">Recuperala acá</RouterLink>
+      </p>
+      <p class="enlace-registro">
         ¿Todavía no tenés una cuenta?
         <RouterLink to="/registro">Registrate</RouterLink>
       </p>

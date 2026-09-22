@@ -2,7 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { supabase } from '@/supabase'
 import InicioView from '@/views/InicioView.vue'
 import LoginView from '@/views/LoginView.vue'
+import RecuperarView from '@/views/RecuperarView.vue'
 import RegistroView from '@/views/RegistroView.vue'
+import RestablecerView from '@/views/RestablecerView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +22,16 @@ const router = createRouter({
       path: '/registro',
       name: 'registro',
       component: RegistroView,
+    },
+    {
+      path: '/recuperar',
+      name: 'recuperar',
+      component: RecuperarView,
+    },
+    {
+      path: '/restablecer',
+      name: 'restablecer',
+      component: RestablecerView,
     },
     {
       path: '/inicio',

@@ -35,7 +35,9 @@ body {
 
 .pagina-login,
 .pagina-registro,
-.pagina-inicio {
+.pagina-inicio,
+.pagina-recuperar,
+.pagina-restablecer {
   width: 100%;
   display: flex;
   align-items: center;
@@ -44,7 +46,9 @@ body {
 
 .tarjeta-login,
 .tarjeta-registro,
-.tarjeta-inicio {
+.tarjeta-inicio,
+.tarjeta-recuperar,
+.tarjeta-restablecer {
   width: 100%;
   max-width: 420px;
   background-color: var(--color-tarjeta);
