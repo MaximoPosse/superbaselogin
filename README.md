@@ -25,6 +25,24 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 npm install
 ```
 
+Crear `.env.local` en la carpeta del proyecto con los valores del proyecto
+Supabase:
+
+```dotenv
+VITE_SUPABASE_URL=https://tu-proyecto.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=tu-clave-publicable
+```
+
+En el SQL Editor de Supabase, ejecutar [`supabase/setup.sql`](supabase/setup.sql).
+Configura la tabla `productos`, políticas RLS por usuario y el bucket público
+`productos` para imágenes JPG, PNG o WEBP de hasta 5 MB.
+
+En Supabase Authentication, usar `http://localhost:5173` como Site URL y
+permitirla en Redirect URLs para confirmación y recuperación de contraseña.
+Si la tabla ya tiene productos sin `user_id`, hacer una copia y asignar cada fila
+a la cuenta propietaria antes de probar: las políticas RLS ocultan filas sin
+propietario.
+
 ### Compile and Hot-Reload for Development
 
 ```sh

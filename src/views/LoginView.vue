@@ -24,7 +24,7 @@ async function iniciarSesion() {
     }
     inicioExitoso.value = true
     mensaje.value = 'Inicio de sesión correcto.'
-    router.push('/inicio')
+    router.push('/productos')
   } catch (error) {
     if (error.message === 'Invalid login credentials') {
       mensaje.value = 'El correo o la contraseña son incorrectos.'

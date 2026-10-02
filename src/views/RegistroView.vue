@@ -92,6 +92,10 @@ async function registrarUsuario() {
       >
         {{ mensaje }}
       </p>
+      <p class="enlace-registro">
+        ¿Ya tenés una cuenta?
+        <RouterLink to="/login">Iniciá sesión</RouterLink>
+      </p>
     </section>
   </main>
 </template>

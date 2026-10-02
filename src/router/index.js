@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { supabase } from '@/supabase'
+import ProductosView from '@/views/ProductosView.vue'
 import InicioView from '@/views/InicioView.vue'
 import LoginView from '@/views/LoginView.vue'
 import RecuperarView from '@/views/RecuperarView.vue'
@@ -34,6 +35,14 @@ const router = createRouter({
       component: RestablecerView,
     },
     {
+      path: '/productos',
+      name: 'productos',
+      component: ProductosView,
+      meta: {
+        requiereAutenticacion: true,
+      },
+    },
+    {
       path: '/inicio',
       name: 'inicio',
       component: InicioView,
@@ -52,7 +61,7 @@ router.beforeEach(async (destino) => {
     return '/login'
   }
   if (session && (destino.path === '/login' || destino.path === '/registro')) {
-    return '/inicio'
+    return '/productos'
   }
 })
 
